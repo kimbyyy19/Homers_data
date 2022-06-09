@@ -18,6 +18,7 @@ my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
 densityplot(my1000,main="original data")
 origmean<-mean(my1000)
 origianlSD<-sd(my1000)
+options(digits = 1)
 ```
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
@@ -79,9 +80,17 @@ sample16SD<-sd(x.avg)
 
 The mean for the sample 16 is `r sample16mean`  with sample 16 standard devation is `r sample16SD`.
 
+```{r}
+numb = 36
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 36")
+sample36mean<-mean(x.avg)
+sample36SD<-sd(x.avg)
+```
 
-
-
+The mean for the sample 16 is `r sample36mean`  with sample 16 standard devation is `r sample36SD`.
 
 
 
