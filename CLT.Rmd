@@ -1,0 +1,61 @@
+---
+title: "CLT"
+author: "kimberly lemus munoz"
+date: '2022-06-08'
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(lattice)
+```
+
+```{r}
+Homers_data <- read.csv(file="Homers_data.csv")
+my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
+densityplot(my1000,main="original data")
+origmean<-mean(my1000)
+origianlSD<-sd(my1000)
+```
+
+Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
+
+NO, it's not unimodal it have two peaks.The peaks are about the same size.The original data is `r origmean` standard devation is `r origianlSD`.
+
+
+
+
+Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1000 points of their averages,
+
+```{r}
+numb = 2
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+sample2mean<-mean(x.avg)
+sample2SD<-sd(x.avg)
+```
+
+
+The plot is not unimodal the plot have  3 peaks of it and they are not the same side.The peaks of the end are the same side while the middle is the above them.The average mean is `r sample2mean` standard deviation `r sample2SD `.
+
+
+
+```{r}
+numb = 4
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 4")
+sample4mean<-mean(x.avg)
+sample4SD<-sd(x.avg)
+```
+
+
+
+The mean for the sample 4 is `r sample4mean`  with sample 4 standard devation is `r sample4SD`.
+
+
