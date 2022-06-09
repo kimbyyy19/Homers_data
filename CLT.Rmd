@@ -54,8 +54,35 @@ sample4mean<-mean(x.avg)
 sample4SD<-sd(x.avg)
 ```
 
+The mean for the sample 4 is `r sample4mean`  with sample 4 standard devation is `r sample4SD`.There's 5 peaks in this sample 4 ,there is 4 people are not liking Kim which is 1 out 4.There is 2 out of 4 liking her in another peak there's 3 out 4 people liking her and the other peak was 4 out 4 liking her.
+
+```{r}
+numb = 9
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 9")
+sample9mean<-mean(x.avg)
+sample9SD<-sd(x.avg)
+```
+The mean for the sample 9 is `r sample9mean`  with sample 9 standard devation is `r sample9SD`.
+
+```{r}
+numb = 16
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 16")
+sample16mean<-mean(x.avg)
+sample16SD<-sd(x.avg)
+```
+
+The mean for the sample 16 is `r sample16mean`  with sample 16 standard devation is `r sample16SD`.
 
 
-The mean for the sample 4 is `r sample4mean`  with sample 4 standard devation is `r sample4SD`.
+
+
+
+
 
 
