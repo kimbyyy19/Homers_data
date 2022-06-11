@@ -23,7 +23,7 @@ options(digits = 1)
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
-NO, it's not unimodal it have two peaks.The peaks are about the same size.The original data is `r origmean` standard devation is `r origianlSD`.
+NO, it's not unimodal it have two peaks.The peaks are about the same size.The original data is `r origmean` standard deviation is `r origianlSD`.
 
 
 
@@ -66,7 +66,9 @@ densityplot(x.avg,main="sample size 9")
 sample9mean<-mean(x.avg)
 sample9SD<-sd(x.avg)
 ```
-The mean for the sample 9 is `r sample9mean`  with sample 9 standard devation is `r sample9SD`.
+The mean for the sample 9 is `r sample9mean`  with sample 9 standard deviation is `r sample9SD`.There are 4 peaks on sample 9 which also tell us this plot isn't unimodal. Two of the peaks are at the same level which at slightly above 0.15. The other 2 are above 0.025.this peaks shown of the 4 out 4 people like her while some don't. Every time we do a higher sample the standard deviation keeps going down drastically. While with the mean it goes down slowly.When comparing to the original data.
+
+
 
 ```{r}
 numb = 16
@@ -78,7 +80,9 @@ sample16mean<-mean(x.avg)
 sample16SD<-sd(x.avg)
 ```
 
-The mean for the sample 16 is `r sample16mean`  with sample 16 standard devation is `r sample16SD`.
+The mean for the sample 16 is `r sample16mean`  with sample 16 standard deviation is `r sample16SD`.This has only one peak, this sample 16  is Unimodal. It seems that this peak is above 0.03.  Every time we do a higher sample the standard deviation keeps going down drastically. While with the mean it goes down slowly.When comparing to the original data.
+
+
 
 ```{r}
 numb = 25
@@ -89,7 +93,13 @@ densityplot(x.avg,main="sample size 25")
 sample25mean<-mean(x.avg)
 sample25SD<-sd(x.avg)
 ```
-The mean for the sample 25 is `r sample25mean`  with sample 25 standard devation is `r sample25SD`.
+
+
+
+The mean for the sample 25 is `r sample25mean`  with sample 25 standard deviation is `r sample25SD`.
+This has 1 peaks in sample 25 which tell us that it’s  unimodal. One peak is at the exact point of 0.05.
+
+
 
 
 ```{r}
@@ -102,7 +112,8 @@ sample36mean<-mean(x.avg)
 sample36SD<-sd(x.avg)
 ```
 
-The mean for the sample 36 is `r sample36mean`  with sample 36 standard devation is `r sample36SD`.
+The mean for the sample 36 is `r sample36mean`  with sample 36 standard deviation is `r sample36SD`.In this one, there is only one peak in this sample 36 this sample is unimodal. The one peak is at 0.05. Every time the standard deviation it goes down drastically while with the mean it seems to go down slowly.When comparing to the original data.
+
 
 
 
